@@ -189,6 +189,24 @@ video {
   object-fit: contain;  /* PREVENT CROPPING */
 }
 
+/* FIX LETTER PAGE BUTTON VISIBILITY (MOBILE) */
+#letter {
+  height: 100vh;
+}
+
+.letter-box {
+  max-height: calc(100vh - 220px); /* leaves space for title + buttons */
+  overflow-y: auto;
+}
+@media (max-width: 600px) {
+  .actions {
+    position: sticky;
+    bottom: 10px;
+    background: linear-gradient(transparent, #ffb3c6);
+    padding-top: 10px;
+  }
+}
+
 
 @keyframes fall {
   to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
